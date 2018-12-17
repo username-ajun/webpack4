@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>芒果看点怎么玩_如何提现_常见问题-芒果看点</title>
+    <meta name="Keywords" content="芒果看点怎么玩,芒果看点赚钱,芒果看点提现">
+    <meta name="Description" content="芒果看点是怎么玩？用户使用app浏览新闻、视频可获得果粒奖励，果粒按一定比例兑换为现金，首次提现无门槛。邀请好友也可获得大额现金奖励！">
+    <link rel="shortcut icon" href="https://cdn-statis.mangguokandian.com/ico/favicon.ico">
+    <script src="https://cdn-statis.mangguokandian.com/vue/2.5.16/vue.min.js"></script>
+    <script>
+        window.onload = function () {
+            var loading = document.getElementById('loading');
+            setTimeout(function () {    //  500后面loading层消失
+                loading.style.display = 'none';
+            }, 200);
+        }
+    </script>
+</head>
+
+<body>
+    <div id="app">
+        <div class="loading" id="loading" ref="loading" style="position: fixed;top: 0;left: 0;bottom: 0;right: 0;background: #fff;z-index: 199;color: #fff;"></div>
+        <header class="header content">
+            <div class="logo left">
+                <img src="https://cdn-statis.mangguokandian.com/mg-web-pc/blackilogo-.png" alt="">
+            </div>
+            <ul class="nav right">
+                <li> <a href="http://www.imgkd.cn">首页</a></li>
+                <li>|</li>
+                <li class="active">帮助中心</li>
+                <li>|</li>
+                <li><a href="http://www.imgkd.cn/about.html">关于我们</a></li>
+            </ul>
+        </header>
+        <div class="help-title">
+            <div class="help-center">HELP CENTER</div>
+            <div class="help-text">帮助中心</div>
+        </div>
+        <div class="help-flex">
+            <div class="help-flex-text">
+                <div class="item" :class="{active: isActive === 1}" @click="isActive = 1">
+                    新手问题
+                    <div class="help-flex-text-spot" v-if="isActive !== 1"></div>
+                    <div class="help-flex-text-lable" v-else>
+                        <img src="https://cdn-statis.mangguokandian.com/mg-web-pc/zhixiang.png" alt="">
+                    </div>
+                </div>
+                <div class="item" :class="{active: isActive === 2}" @click="isActive = 2">
+                    任务果粒问题
+                    <div class="help-flex-text-spot" v-if="isActive !== 2"></div>
+                    <div class="help-flex-text-lable" v-else>
+                        <img src="https://cdn-statis.mangguokandian.com/mg-web-pc/zhixiang.png" alt="">
+                    </div>
+                </div>
+                <div class="item" :class="{active: isActive === 3}" @click="isActive = 3">
+                    邀请好友问题
+                    <div class="help-flex-text-spot" v-if="isActive !== 3"></div>
+                    <div class="help-flex-text-lable" v-else>
+                        <img src="https://cdn-statis.mangguokandian.com/mg-web-pc/zhixiang.png" alt="">
+                    </div>
+                </div>
+                <div class="item" :class="{active: isActive === 4}" @click="isActive = 4">
+                    提现问题
+                    <div class="help-flex-text-spot" v-if="isActive !== 4"></div>
+                    <div class="help-flex-text-lable" v-else>
+                        <img src="https://cdn-statis.mangguokandian.com/mg-web-pc/zhixiang.png" alt="">
+                    </div>
+                </div>
+                <div class="item" :class="{active: isActive === 5}" @click="isActive = 5">
+                    其他问题
+                    <div class="help-flex-text-spot" v-if="isActive !== 5"></div>
+                    <div class="help-flex-text-lable" v-else>
+                        <img src="https://cdn-statis.mangguokandian.com/mg-web-pc/zhixiang.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="help-flex-lable">
+                <div class="help-flex-lable-border"></div>
+            </div>
+            <div class="help-flex-contens">
+                <ul class="help-flex-contens-list" v-if="isActive === 1">
+                    <li class="help-flex-contens-item">
+                        <div class="help-flex-contens-item-title">
+                            <div @click="showIoc1 = !showIoc1">什么是芒果看点？</div>
+                            <div @click="showIoc1 = !showIoc1">
+                                <img  src="https://cdn-statis.mangguokandian.com/mg-web-pc/xia.png" v-if="!showIoc1" 
+                                    alt="">
+                                <img v-else src="https://cdn-statis.mangguokandian.com/mg-web-pc/shang.png" alt="">
+                            </div>
+                        </div>
+                        <div  class="help-flex-contens-item-text" v-if="showIoc1">
+                            芒果看点是一款创新模式的资讯阅读类应用，汇集国内外突发热点、时事要闻、娱乐八卦、体育赛事、社会趣闻、直播视频、精彩图集等各类资讯，内容丰富有趣。芒果看点致力于帮助用户养成良好的阅读习惯，同时给予用户丰厚的奖励，让阅读更有价值。
+                        </div>
+                    </li>
+                    <li class="help-flex-contens-item">
+                        <div class="help-flex-contens-item-title">
+                            <div @click="showIoc2 = !showIoc2">芒果看点为什么要给您奖励？</div>
+                            <div @click="showIoc2 = !showIoc2">
+                                <img  src="https://cdn-statis.mangguokandian.com/mg-web-pc/xia.png" v-if="!showIoc2" 
+                                    alt="">
+                                <img v-else src="https://cdn-statis.mangguokandian.com/mg-web-pc/shang.png" alt="">
+                            </div>
+                        </div>
+                        <div  class="help-flex-contens-item-text" v-if="showIoc2">
+                            为了帮助大家养成良好的阅读习惯，引领全民阅读，在大家阅读资讯的过程中，芒果看点会给予一定的果粒（平台虚拟货币）奖励，果粒可以直接用来兑换成现金提现哦。所以芒果看点希望大家可以在使用过程中不仅增长知识、开拓眼界，还能获得高额收益。
+                        </div>
+                    </li>
+                    <li class="help-flex-contens-item">
+                        <div class="help-flex-contens-item-title">
+                            <div @click="showIoc3 = !showIoc3">什么任务赚钱快？</div>
+                            <div @click="showIoc3 = !showIoc3">
+                                <img  src="https://cdn-statis.mangguokandian.com/mg-web-pc/xia.png" v-if="!showIoc3" 
+                                    alt="">
+                                <img v-else src="https://cdn-statis.mangguokandian.com/mg-web-pc/shang.png" alt="">
+                            </div>
+                        </div>
+                        <div  class="help-flex-contens-item-text" v-if="showIoc3">
+                            【邀请好友】赚钱快！您可通过微信、QQ等方式邀请您的亲朋好友，每成功邀请一位好友最高可获得32+元奖励。邀请无上限，好友越多，奖励越多。好友每日阅读还会向您贡献果粒，只要好友足够多，您躺着也能赚现金哦！
+                        </div>
+                    </li>
+                    <li class="help-flex-contens-item">
+                        <div class="help-flex-contens-item-title">
+                            <div @click="showIoc4 = !showIoc4">实名认证是什么？认证后能获得哪些权益？</div>
+                            <div @click="showIoc4 = !showIoc4">
+                                <img  src="https://cdn-statis.mangguokandian.com/mg-web-pc/xia.png" v-if="!showIoc4" 
+                                    alt="">
+                                <img v-else src="https://cdn-statis.mangguokandian.com/mg-web-pc/shang.png" alt="">
+                            </div>
+                        </div>
+                        <div  class="help-flex-contens-item-text" v-if="showIoc4">
+                            实名认证是芒果看点为了您的账户安全推出的安全服务，通过认证后您即可成为实名认证会员，同时也将享受认证会员的专属权益。<br/> 认证会员权益有：<br/>①您的提现申请会得到快速审核；<br/>②您每天阅读文章和观看视频获得果粒奖励的机会各提升至300次；<br/>③您每次阅读文章和观看视频获得果粒奖励的数量将会增加；<br/>④更多认证会员权益敬请期待。
+                        </div>
+                    </li>
+                </ul>
+                <ul class="help-flex-contens-list" v-if="isActive === 2">
+                    <li class="help-flex-contens-item">
+                        <div class="help-flex-contens-item-title">
+                            <div @click="showIoc5 = !showIoc5">果粒是什么？一个果粒等于多少人民币？</div>
+                            <div @click="showIoc5 = !showIoc5">
+                                <img  src="https://cdn-statis.mangguokandian.com/mg-web-pc/xia.png" v-if="!showIoc5" 
+                                    alt="">
+                                <img v-else src="https://cdn-statis.mangguokandian.com/mg-web-pc/shang.png" alt="">
+                            </div>
+                        </div>
+                        <div  class="help-flex-contens-item-text" v-if="showIoc5">
+                            果粒是芒果看点内使用的货币单位，果粒可以通过一定的汇率兑换为现金。目前果粒与人民币比率为10000比1，即10000果粒等于1元人民币。如若平台内汇率出现变更，将会以公告的形式通知大家。
+                        </div>
+                    </li>
+                    <li class="help-flex-contens-item">
+                        <div class="help-flex-contens-item-title">
+                            <div @click="showIoc6 = !showIoc6">果粒如何兑换为现金？</div>
+                            <div @click="showIoc6 = !showIoc6">
+                                <img  src="https://cdn-statis.mangguokandian.com/mg-web-pc/xia.png" v-if="!showIoc6" 
+                                    alt="">
+                                <img v-else src="https://cdn-statis.mangguokandian.com/mg-web-pc/shang.png" alt="">
+                            </div>
+                        </div>
+                        <div  class="help-flex-contens-item-text" v-if="showIoc6">
+                            ①进入【任务】页面--点击果粒进入【我的账户】--点击【果粒兑换】;<br/> ②输入您可兑换果粒数量，即可将果粒兑换成现金。
+                        </div>
+                    </li>
+                    <li class="help-flex-contens-item">
+                        <div class="help-flex-contens-item-title">
+                            <div @click="showIoc7 = !showIoc7">看文章或视频每天有多少次获得果粒的机会？</div>
+                            <div @click="showIoc7 = !showIoc7">
+                                <img  src="https://cdn-statis.mangguokandian.com/mg-web-pc/xia.png" v-if="!showIoc7" 
+                                    alt="">
+                                <img v-else src="https://cdn-statis.mangguokandian.com/mg-web-pc/shang.png" alt="">
+                            </div>
+                        </div>
+                        <div  class="help-flex-contens-item-text" v-if="showIoc7">
+                            为了培养大家良好的阅读习惯，认真阅读文章和观看视频后，每天封顶各有100次获得果粒的机会，实名认证会员获得阅读奖励的机会提升为各300次。
+                        </div>
+                    </li>
+                    <li class="help-flex-contens-item">
+                        <div class="help-flex-contens-item-title">
+                            <div @click="showIoc8 = !showIoc8">什么途径可以获得果粒？</div>
+                            <div @click="showIoc8 = !showIoc8">
+                                <img  src="https://cdn-statis.mangguokandian.com/mg-web-pc/xia.png" v-if="!showIoc8" 
+                                    alt="">
+                                <img v-else src="https://cdn-statis.mangguokandian.com/mg-web-pc/shang.png" alt="">
+                            </div>
+                        </div>
+                        <div  class="help-flex-contens-item-text" v-if="showIoc8">
+                            在芒果看点内获得果粒的方式主要有如下10类：<br/>①时段奖励：每个整点打开芒果看点进入首页，点击右上角的“领取”图标，均可获得随机果粒奖励。<br/>②签到：当日签到获得的果粒数=100+50*（n-1），n为连续签到天数，每天最高800果粒封顶，若断签则重新开始计算。<br/>③实名认证：完成实名认证，即可获得3000果粒。<br/>④输入邀请码：填写好友的邀请码，即可获得3000果粒。<br/>⑤阅读资讯：认真阅读文章或观看视频，每满30-60秒即可获得最高100果粒，每天封顶各有100次获得果粒的机会，实名认证会员获得阅读奖励的机会提升为各300次。<br/>⑥好友阅读奖励（分享资讯被阅读）：分享资讯在微信内被好友认真阅读即有机会获得150果粒；在非微信内被好友认真阅读可得100果粒。每天通过分享有50次获得好友阅读奖励的机会，但同一资讯被同一好友阅读多次，只奖励1次。奖励发放时间为次日0:00~6:00。<br/>⑦晒收入：分享收入给好友，即可获得100果粒，每天首次分享可获得果粒。<br/>⑧成为精彩评论：当您发出的评论获得1个非本人点赞，即可获得50果粒，每天封顶有20次获得果粒的机会。<br/>⑨阅读推送资讯：芒果看点每天会不定时推送给您一些精彩新闻或视频，点击并认真阅读，每篇即可获得300果粒。<br/>⑩优质意见反馈：欢迎大家反馈问题与建议，可以是产品问题上的真知灼见，也可以是脑洞大开的创意想法，被选中为优质反馈的用户即可获得800果粒奖励。
+                        </div>
+                    </li>
+                    <li class="help-flex-contens-item">
+                        <div class="help-flex-contens-item-title">
+                            <div @click="showIoc9 = !showIoc9">注册会获得多少元红包？</div>
+                            <div @click="showIoc9 = !showIoc9">
+                                <img  src="https://cdn-statis.mangguokandian.com/mg-web-pc/xia.png" v-if="!showIoc9" 
+                                    alt="">
+                                <img v-else src="https://cdn-statis.mangguokandian.com/mg-web-pc/shang.png" alt="">
+                            </div>
+                        </div>
+                        <div  class="help-flex-contens-item-text" v-if="showIoc9">
+                            下载安装注册首次登录后，可获得现金红包，最高300元。
+                        </div>
+                    </li>
+                    <li class="help-flex-contens-item">
+                        <div class="help-flex-contens-item-title">
+                            <div @click="showIoc10 = !showIoc10">邀请好友的32+元奖励如何获得？</div>
+                            <div @click="showIoc10 = !showIoc10">
+                                <img  src="https://cdn-statis.mangguokandian.com/mg-web-pc/xia.png" v-if="!showIoc10" 
+                                    alt="">
+                                <img v-else src="https://cdn-statis.mangguokandian.com/mg-web-pc/shang.png" alt="">
+                            </div>
+                        </div>
+                        <div  class="help-flex-contens-item-text" v-if="showIoc10">
+                            ①您每邀请一个好友成为果友，将获得6元现金奖励（分7次发放：0.5元、0.5元、0.8元、0.8元、0.8元、1元、1.6元），果友每次获得800果粒的看资讯奖励，您即可获得一次现金奖励（每天限一次）。<br>②首次邀请一个好友成为果友，将额外获得2元的现金奖励，只要您的果友注册并成功登录芒果看点，您即可获得2元现金奖励。<br>③当您的果友阅读资讯时，您还可以获得果友阅读收益的20%，每位果友一个月最多将给您带来24元的进贡收益。<br>④芒果看点平台将会持续推出奖励丰厚的邀请活动，活动奖励和常规邀请奖励可以叠加享有，请及时关注活动消息。
+                        </div>
+                    </li>
+                </ul>
+                <ul class="help-flex-contens-list" v-if="isActive === 3">
+                    <li class="help-flex-contens-item">
+                        <div class="help-flex-contens-item-title">
+                            <div @click="showIoc11 = !showIoc11">果友是什么？</div>
+                            <div @click="showIoc11 = !showIoc11">
+                                <img  src="https://cdn-statis.mangguokandian.com/mg-web-pc/xia.png" v-if="!showIoc11" 
+                                    alt="">
+                                <img v-else src="https://cdn-statis.mangguokandian.com/mg-web-pc/shang.png" alt="">
+                            </div>
+                        </div>
+                        <div  class="help-flex-contens-item-text" v-if="showIoc11">
+                            好友通过您分享的链接注册或注册后绑定了您提供的邀请码，该好友将成为您的果友，果友关系一旦建立，不可更改或解除。<br/>您将永久从果友那里获得果粒收益。
+                        </div>
+                    </li>
+                    <li class="help-flex-contens-item">
+                        <div class="help-flex-contens-item-title">
+                            <div @click="showIoc12 = !showIoc12">怎样获得果友？</div>
+                            <div @click="showIoc12 = !showIoc12">
+                                <img  src="https://cdn-statis.mangguokandian.com/mg-web-pc/xia.png" v-if="!showIoc12" 
+                                    alt="">
+                                <img v-else src="https://cdn-statis.mangguokandian.com/mg-web-pc/shang.png" alt="">
+                            </div>
+                        </div>
+                        <div  class="help-flex-contens-item-text" v-if="showIoc12">
+                            ①面对面邀请：进入【邀请好友】页面，点击二维码。让朋友用微信或相机扫描二维码注册并下载安装登录后，即可成为您的果友。<br/>温馨提示：您可将二维码图片保存至手机相册，方便您随时分享给朋友。<br/>②远距离邀请：进入【邀请好友】页面，选择微信好友、朋友圈等方式分享链接给好友，好友通过您分享的链接注册下载安装登录后，即可成为您的果友。
+                        </div>
+                    </li>
+                    <li class="help-flex-contens-item">
+                        <div class="help-flex-contens-item-title">
+                            <div @click="showIoc13 = !showIoc13">邀请码是什么？怎么用？</div>
+                            <div @click="showIoc13 = !showIoc13">
+                                <img  src="https://cdn-statis.mangguokandian.com/mg-web-pc/xia.png" v-if="!showIoc13" 
+                                    alt="">
+                                <img v-else src="https://cdn-statis.mangguokandian.com/mg-web-pc/shang.png" alt="">
+                            </div>
+                        </div>
+                        <div  class="help-flex-contens-item-text" v-if="showIoc13">
+                            邀请码是芒果看点平台为每位用户设计的独立ID号，只在绑定果友时使用。如果朋友已经安装芒果看点，您需要让朋友登录后填写您的邀请码，这样才能成为您的果友。
+                        </div>
+                    </li>
+                    <li class="help-flex-contens-item">
+                        <div class="help-flex-contens-item-title">
+                            <div @click="showIoc14 = !showIoc14">我的邀请码在哪里？</div>
+                            <div @click="showIoc14 = !showIoc14">
+                                <img  src="https://cdn-statis.mangguokandian.com/mg-web-pc/xia.png" v-if="!showIoc14" 
+                                    alt="">
+                                <img v-else src="https://cdn-statis.mangguokandian.com/mg-web-pc/shang.png" alt="">
+                            </div>
+                        </div>
+                        <div  class="help-flex-contens-item-text" v-if="showIoc14">
+                            可以按如下路径寻找：【我的】--【我的邀请码】，点击即可复制。
+                        </div>
+                    </li>
+                    <li class="help-flex-contens-item">
+                        <div class="help-flex-contens-item-title">
+                            <div @click="showIoc15 = !showIoc15">在哪里可以输入朋友的邀请码？</div>
+                            <div @click="showIoc15 = !showIoc15">
+                                <img  src="https://cdn-statis.mangguokandian.com/mg-web-pc/xia.png" v-if="!showIoc15" 
+                                    alt="">
+                                <img v-else src="https://cdn-statis.mangguokandian.com/mg-web-pc/shang.png" alt="">
+                            </div>
+                        </div>
+                        <div  class="help-flex-contens-item-text" v-if="showIoc15">
+                            可以按如下路径寻找：【任务】--【输入邀请码】--【去输入】，输入后该任务会从任务栏消失，同时您可获得奖励。如果您无法找到该任务，说明您已经是某个用户的果友，不能再次输入邀请码了。需要注意的是，您的注册时间必须在您朋友注册时间之后，才能成功绑定您朋友的邀请码。
+                        </div>
+                    </li>
+                    <li class="help-flex-contens-item">
+                        <div class="help-flex-contens-item-title">
+                            <div @click="showIoc16 = !showIoc16">邀请码输入错误怎么办？</div>
+                            <div @click="showIoc16 = !showIoc16">
+                                <img  src="https://cdn-statis.mangguokandian.com/mg-web-pc/xia.png" v-if="!showIoc16" 
+                                    alt="">
+                                <img v-else src="https://cdn-statis.mangguokandian.com/mg-web-pc/shang.png" alt="">
+                            </div>
+                        </div>
+                        <div  class="help-flex-contens-item-text" v-if="showIoc16">
+                            目前芒果看点不支持更换绑定邀请码功能，绑定仔细核对邀请码。
+                        </div>
+                    </li>
+                    <li class="help-flex-contens-item">
+                        <div class="help-flex-contens-item-title">
+                            <div @click="showIoc17 = !showIoc17">我的邀请人是谁？</div>
+                            <div @click="showIoc17 = !showIoc17">
+                                <img  src="https://cdn-statis.mangguokandian.com/mg-web-pc/xia.png" v-if="!showIoc17" 
+                                    alt="">
+                                <img v-else src="https://cdn-statis.mangguokandian.com/mg-web-pc/shang.png" alt="">
+                            </div>
+                        </div>
+                        <div  class="help-flex-contens-item-text" v-if="showIoc17">
+                            进入【我的】--点击头像--【个人中心】，即可查看您的邀请人信息。
+                        </div>
+                    </li>
+                </ul>
+                <ul class="help-flex-contens-list" v-if="isActive === 4">
+                    <li class="help-flex-contens-item">
+                        <div class="help-flex-contens-item-title">
+                            <div @click="showIoc18 = !showIoc18">怎样提现？</div>
+                            <div @click="showIoc18 = !showIoc18">
+                                <img  src="https://cdn-statis.mangguokandian.com/mg-web-pc/xia.png" v-if="!showIoc18" 
+                                    alt="">
+                                <img v-else src="https://cdn-statis.mangguokandian.com/mg-web-pc/shang.png" alt="">
+                            </div>
+                        </div>
+                        <div  class="help-flex-contens-item-text" v-if="showIoc18">
+                            ①为了保证芒果看点用户的账户安全，您在完成实名认证后即可提现；<br/>②进入【任务】页面--点击现金进入【我的账户】--点击【提现】；<br/>③选择您的提现金额、提现方式即可申请提现。
+                        </div>
+                    </li>
+                    <li class="help-flex-contens-item">
+                        <div class="help-flex-contens-item-title">
+                            <div @click="showIoc19 = !showIoc19">有哪些提现方式？</div>
+                            <div @click="showIoc19 = !showIoc19">
+                                <img  src="https://cdn-statis.mangguokandian.com/mg-web-pc/xia.png" v-if="!showIoc19" 
+                                    alt="">
+                                <img v-else src="https://cdn-statis.mangguokandian.com/mg-web-pc/shang.png" alt="">
+                            </div>
+                        </div>
+                        <div  class="help-flex-contens-item-text" v-if="showIoc19">
+                            芒果看点目前支持的提现方式为：①提现到支付宝 ②提现到微信零钱包。
+                        </div>
+                    </li>
+                    <li class="help-flex-contens-item">
+                        <div class="help-flex-contens-item-title">
+                            <div @click="showIoc20 = !showIoc20">申请提现之后多久到账？</div>
+                            <div @click="showIoc20 = !showIoc20">
+                                <img  src="https://cdn-statis.mangguokandian.com/mg-web-pc/xia.png" v-if="!showIoc20" 
+                                    alt="">
+                                <img v-else src="https://cdn-statis.mangguokandian.com/mg-web-pc/shang.png" alt="">
+                            </div>
+                        </div>
+                        <div  class="help-flex-contens-item-text" v-if="showIoc20">
+                            提现申请提交后，预计将在1-3个工作日内审批到账（双休日、节假日顺延）。
+                        </div>
+                    </li>
+                    <li class="help-flex-contens-item">
+                        <div class="help-flex-contens-item-title">
+                            <div @click="showIoc21 = !showIoc21">提现之后一直不到账该怎么办？</div>
+                            <div @click="showIoc21 = !showIoc21">
+                                <img  src="https://cdn-statis.mangguokandian.com/mg-web-pc/xia.png" v-if="!showIoc21" 
+                                    alt="">
+                                <img v-else src="https://cdn-statis.mangguokandian.com/mg-web-pc/shang.png" alt="">
+                            </div>
+                        </div>
+                        <div  class="help-flex-contens-item-text" v-if="showIoc21">
+                            因提现业务火爆，每逢热门活动上线或节假日时，订单积压较为严重，提现审核进度稍显迟缓，请您谅解；存在疑似作弊行为的账号，提现申请将被驳回；如果超过10个工作日提现申请仍处于待审核状态，可通过关注微信公众号“芒果看点”，直接留言找到客服咨询详情。
+                        </div>
+                    </li>
+                </ul>
+                <ul class="help-flex-contens-list" v-if="isActive === 5">
+                    <li class="help-flex-contens-item">
+                        <div class="help-flex-contens-item-title">
+                            <div @click="showIoc22 = !showIoc22">哪些内容属于违规评论？</div>
+                            <div @click="showIoc22 = !showIoc22">
+                                <img  src="https://cdn-statis.mangguokandian.com/mg-web-pc/xia.png" v-if="!showIoc22" 
+                                    alt="">
+                                <img v-else src="https://cdn-statis.mangguokandian.com/mg-web-pc/shang.png" alt="">
+                            </div>
+                        </div>
+                        <div  class="help-flex-contens-item-text" v-if="showIoc22">
+                            ①违反国家法律法规及相关规定，含有极端政治、犯罪、宗教等敏感言论的内容；<br/>②发表含有邀请码、广告、推广其他平台等有关信息的内容；<br/>③攻击、谩骂其他用户，发表带有侮辱性质语言的内容，以及其他影响社区氛围的评论；<br/>④含有粗俗、色情等违规内容的评论等。<br/>为了给大家提供优质的评论区氛围和更好的用户体验，我们将对以上违规评论内容做删除处理，对部分严重违规的用户还会有相应的处罚措施，请大家自觉遵守评论规则，文明发言。
+                        </div>
+                    </li>
+                    <li class="help-flex-contens-item">
+                        <div class="help-flex-contens-item-title">
+                            <div @click="showIoc23 = !showIoc23">为什么图片加载不出来？</div>
+                            <div @click="showIoc23 = !showIoc23">
+                                <img  src="https://cdn-statis.mangguokandian.com/mg-web-pc/xia.png" v-if="!showIoc23" 
+                                    alt="">
+                                <img v-else src="https://cdn-statis.mangguokandian.com/mg-web-pc/shang.png" alt="">
+                            </div>
+                        </div>
+                        <div  class="help-flex-contens-item-text" v-if="showIoc23">
+                            可能是您网络情况不好，可以更换网络尝试一下，如果仍然不能加载出来，请进入【我的】--【意见反馈】中向我们反馈。
+                        </div>
+                    </li>
+                    <li class="help-flex-contens-item">
+                        <div class="help-flex-contens-item-title">
+                            <div @click="showIoc24 = !showIoc24">为什么视频看不了？</div>
+                            <div @click="showIoc24 = !showIoc24">
+                                <img  src="https://cdn-statis.mangguokandian.com/mg-web-pc/xia.png" v-if="!showIoc24" 
+                                    alt="">
+                                <img v-else src="https://cdn-statis.mangguokandian.com/mg-web-pc/shang.png" alt="">
+                            </div>
+                        </div>
+                        <div  class="help-flex-contens-item-text" v-if="showIoc24">
+                            有以下几种情况：<br/>①网络环境不好，切换网络环境试一下；<br/>②视频内容出问题，请尝试观看其它视频；<br/>③服务器崩溃啦，程序员们正在努力修复，看看其它内容吧！
+                        </div>
+                    </li>
+                    <li class="help-flex-contens-item">
+                        <div class="help-flex-contens-item-title">
+                            <div @click="showIoc25 = !showIoc25">出现了闪退怎么办？</div>
+                            <div @click="showIoc25 = !showIoc25">
+                                <img  src="https://cdn-statis.mangguokandian.com/mg-web-pc/xia.png" v-if="!showIoc25" alt="">
+                                <img v-else src="https://cdn-statis.mangguokandian.com/mg-web-pc/shang.png" alt="">
+                            </div>
+                        </div>
+                        <div  class="help-flex-contens-item-text" v-if="showIoc25">
+                            如果发现这样的问题，可以通过关注微信公众号"芒果看点"， 将以下信息反馈给客服：手机型号、软件版本、崩溃前使用的场景。
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer">@2018 快寻科技 版权所有 鄂ICP备18011707号-2</div>
+    </div>
+<script type="text/javascript" src="js/help892c433880fbbb97634c.js"></script></body>
+
+</html>

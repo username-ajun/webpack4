@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>芒果看点 - 看新闻赚果粒，让阅读更有价值</title>
+    <meta name="Keywords" content="芒果看点,芒果看点app,果粒,热点资讯,头条新闻,资讯看点,阅读赚钱,看新闻赚钱,赚零花钱,网络赚钱">
+    <meta name="Description" content="芒果看点致力于帮助用户养成良好的阅读习惯，同时给予用户丰厚的奖励，让您的阅读更有价值。下载app即可领现金红包，看新闻赚果粒(可兑换现金)，首次无门槛提现。">
+    <meta name="baidu-site-verification" content="RUkJ96w2TK" />
+    <meta name="360-site-verification" content="86b63401ce0e43b7de973e075047dbf6" />
+    <meta name="sogou_site_verification" content="4rysd5HUaS"/>
+    <meta name="shenma-site-verification" content="4d5a9e614fd44ed82dd7556fb8f7958c_1544772012">
+    <link rel="shortcut icon" href="https://cdn-statis.mangguokandian.com/ico/favicon.ico">
+    <script src="https://cdn-statis.mangguokandian.com/vue/2.5.16/vue.min.js"></script>
+    <script src="https://cdn-statis.mangguokandian.com/js/qrcode.min.js"></script>
+    <script>
+        window.onload = function () {
+            var loading = document.getElementById('loading');
+            setTimeout(function () {    //  500后面loading层消失
+                loading.style.display = 'none';
+            }, 200);
+        }
+    </script>
+</head>
+
+<body>
+    <div id="app" style="overflow-x: hidden;">
+        <div class="loading" id="loading" ref="loading" style="position: fixed;top: 0;left: 0;bottom: 0;right: 0;background: #fff;z-index: 199;color: #fff;"></div>
+        <div class=" bg bg-1">
+            <header class="header content">
+                <div class="logo left">
+                    <img src="https://cdn-statis.mangguokandian.com/mg-web-pc/bailogo.png" alt="芒果看点logo">
+                </div>
+                <ul class="nav right">
+                    <li class="active">首页</li>
+                    <li>|</li>
+                    <li><a href="http://www.imgkd.cn/help.html">帮助中心</a></li>
+                    <li>|</li>
+                    <li><a href="http://www.imgkd.cn/about.html">关于我们</a></li>
+                </ul>
+            </header>
+            <div class="imgIphone">
+                <div class="iphone1 left">
+                    <img src="https://cdn-statis.mangguokandian.com/mg-web-pc/iphone1.png" alt="">
+                </div>
+                <div class="slogan1 right">
+                    <img src="https://cdn-statis.mangguokandian.com/mg-web-pc/slogan1.png" alt="">
+                    <div class="qrcode">
+                        <div id="qrcode"></div>
+                    </div>
+                    <div class="tips">扫码下载芒果看点</div>
+                </div>
+            </div>
+        </div>
+        <div class=" bg bg-2">
+            <div class="read">
+                <div class="text">
+                    <div class="h1"> <span>READING&nbsp;&nbsp;</span> 阅读</div>
+                    <p>汇集海量精彩资讯</p>
+                    <p>第一时间了解最新热点</p>
+                    <p>引领全名阅读风潮</p>
+                </div>
+                <div class="iphone2">
+                    <img src="https://cdn-statis.mangguokandian.com/mg-web-pc/iphone2.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class=" bg bg-3">
+            <div class="read">
+                <div class="iphone2">
+                    <img src="https://cdn-statis.mangguokandian.com/mg-web-pc/iphone3.png" alt="">
+                </div>
+                <div class="text">
+                    <div class="h1">兴趣 <span>&nbsp;&nbsp;INTERESTS</span></div>
+                    <p>为你量身定制</p>
+                    <p>打造你感兴趣的专属看点</p>
+                </div>
+            </div>
+        </div>
+        <div class=" bg bg-4">
+            <div class="read">
+                <div class="text">
+                    <div class="h1"> <span>VALUE&nbsp;&nbsp;</span> 价值</div>
+                    <p>平台收益全民共享</p>
+                    <p>让碎片化的时间更有价值</p>
+                </div>
+                <div class="iphone2">
+                    <img src="https://cdn-statis.mangguokandian.com/mg-web-pc/iphone4.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class=" bg bg-5">
+            <div class="read">
+                <div class="notice left">
+                    <div class="notice-text">
+                        <div class="title">
+                            <div class="left">
+                                <p class="informating">INFORMATION</p>
+                                <div>芒果公告</div>
+                            </div>
+                            <div class="right">
+                                <a href="./notice.html">查看更多 ></a>
+                            </div>
+                        </div>
+                        <div class="noticeList">
+                            <a class="item" href="http://www.imgkd.cn/notice/2018121204.html">
+                                <div class="notice-title">芒果看点V1.5.1版本发布，实名认证会员可享更多权益！</div>
+                                <div class="time">2018/11/20</div>
+                            </a>
+                            <a class="item" href="http://www.imgkd.cn/notice/2018121203.html">
+                                <div class="notice-title">芒果看点V1.5版本正式上线！等你发现更多精彩！</div>
+                                <div class="time">2018/11/16</div>
+                            </a>
+                            <a class="item" href="http://www.imgkd.cn/notice/2018121202.html">
+                                <div class="notice-title">芒果看点常见问题Q&A（一）</div>
+                                <div class="time">2018/11/13</div>
+                            </a>
+                            <a class="item" href="http://www.imgkd.cn/notice/2018121201.html">
+                                <div class="notice-title">关注“芒果看点”公众号联系官方客服</div>
+                                <div class="time">2018/10/31</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="border"></div>
+                </div>
+                <div class="weicode right">
+                    <div class="aboutma">
+                        <img src="https://cdn-statis.mangguokandian.com/mg-web-pc/aboutma.png" alt="芒果看点微信公众号二维码">
+                    </div>
+                    <div class="h1">福利活动首发，官方客服资讯</div>
+                    <p>关注“芒果看点”微信公众号</p>
+                </div>
+            </div>
+            <div class="footer">@2018 快寻科技 版权所有 鄂ICP备18011707号-2</div>
+        </div>
+        <!-- 返回顶部 -->
+        <div @click="gotop" class="gotop" id="gotop">
+            <img src="https://cdn-statis.mangguokandian.com/mg-web-pc/gotop.png" alt="">
+        </div>
+        <div class="top-nav" id="topNav">
+            <div class="content">
+                <div class="logo">
+                    <img src="https://cdn-statis.mangguokandian.com/mg-web-pc/movelogo.png" alt="">
+                </div>
+                <div class="erweima">
+                    扫码下载芒果看点<img src="https://cdn-statis.mangguokandian.com/mg-web-pc/movesaoma.png" alt="" id="erweima">
+                    <div class="dikuang" id="dikuang">
+                        <img src="https://cdn-statis.mangguokandian.com/mg-web-pc/5ma.png" alt="芒果看点app下载二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

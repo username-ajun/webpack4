@@ -1,0 +1,109 @@
+
+.help-title{
+    width: 1300px;
+    margin: 28px auto 0;
+    padding-left: 131px;
+    position: relative;
+    .help-center{
+        font-size: 72px;
+        color: #f0f0f0;
+        font-weight: bold;
+    }
+    .help-text{
+        position: absolute;
+        left: 131px;
+        bottom: 8px;
+        font-size: 36px;
+    }
+}
+.help-flex{
+    width: 1300px;
+    margin: 27px auto 100px;
+    display: flex;
+    justify-content: flex-start;
+    .help-flex-text{
+        display: flex;
+        flex-direction: column;
+        margin: 24px 28px 0 0;
+        .item{
+            position: relative;
+            font-size: 18px;
+            text-align: right;
+            padding: 20px 0;
+            cursor: pointer;
+            &:hover{
+                font-weight: bold;
+                color: #ffcd1f;
+            }
+            .help-flex-text-spot{
+                position: absolute;
+                top: 23px;
+                right: -34px;
+                width: 10px;
+                height: 10px;
+                background-color: #e0e0e0;
+                border-radius: 5px;
+            }
+            .help-flex-text-lable{
+                position: absolute;
+                top: 20px;
+                right: -58px;
+                width: 47px;
+                height: 17px;
+            }
+        }
+        .active{
+            font-weight: bold;
+            color: #ffcd1f;
+        }
+    }
+    .help-flex-lable{
+        display: flex;
+        flex-direction: column;
+        margin-right: 83px;
+        .help-flex-lable-border{
+            width: 2px;
+            height: 336px;
+            background-color: #f2f2f2;
+        }
+    }
+    .help-flex-contens{
+        flex: 1;
+        min-height: 755px;
+        padding: 50px;
+        background-color: #ffffff;
+        box-shadow: 0px 0px 16px 0px rgba(139, 139, 139, 0.3);
+        margin-top: 45px;
+        .help-flex-contens-list{
+            .help-flex-contens-item{
+                cursor: pointer;
+                border-bottom: 1px solid #e0e0e0;
+                .help-flex-contens-item-title{
+                    padding: 30px 0;
+                    display: flex;
+                    justify-content: space-between;
+                    div{
+                        font-size: 20px;
+                        font-weight: normal;
+                        font-stretch: normal;
+                        letter-spacing: 0px;
+                        color: #1a1a1a;
+                        img{
+                            width: 16px;
+                            height: 10px;
+                        }
+                    }
+                }
+                .help-flex-contens-item-text{
+                    padding: 0px 78px 30px 30px;
+                    line-height: 1.5;
+                    font-size: 14px;
+                    font-weight: normal;
+                    font-stretch: normal;
+                    letter-spacing: 0px;
+                    color: #666666;
+                }
+            }
+        }
+    }
+}
